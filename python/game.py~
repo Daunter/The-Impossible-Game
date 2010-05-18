@@ -61,13 +61,13 @@ def main():
     t = Image('triangle.png')
     b = Image('testback.png')
     box = Box('box.png', 80, 212)
-    t_pos = [420, 212]
+    t_pos = [400, 212]
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT: sys.exit()
             elif event.type == pygame.MOUSEBUTTONUP: box.jump()
         t_pos[0] -= 1
-        if t_pos[0] < 60: t_pos[0] = 420
+        if t_pos[0] < 80: t_pos[0] = 400
         b.draw_into(screen)
         box.draw_into(screen)
         t.draw_into(screen, *t_pos)
